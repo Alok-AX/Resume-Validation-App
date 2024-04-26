@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Validation App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Resume Validation App</h1>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h2>Upload Resumes</h2>
+        <input type="file" id="resumeUpload" multiple class="select_input">
+        <button class="btn btn-primary mt-2" onclick="uploadResumes()">Upload</button>
+        <table class="table table-striped mt-3" id="resumesTable">
+          <thead>
+            <tr>
+              <th>Resume Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button class="btn btn-success mt-3" onclick="validateResumes()">Validate Selected Resumes</button>
+      </div>
+      <div class="col-md-12">
+        <h2>Validated Resumes</h2>
+        <table class="table table-striped" id="validatedResumesTable">
+          <thead>
+            <tr>
+              <th>Resume Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button class="btn btn-info mt-3" onclick="communicateWithResumes()">Communicate with Selected Resumes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
